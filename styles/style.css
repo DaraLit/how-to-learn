@@ -267,7 +267,7 @@
   min-height: 350px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   padding-top: 60px;
   padding-bottom: 40px;
 }
