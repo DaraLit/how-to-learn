@@ -21,19 +21,19 @@
   /* выше установили ограничения для секции */
 }
 .logo {
-  position: absolute;
   width: 228px;
   height: 32px;
   z-index: 1;
 }
 
-.logo-place-header {
+.logo_place_header {
+  position: absolute;
   top: 30px;
   left: 64px;
 }
 
 .header__title {
-  width: 730px;
+  max-width: 730px;
   margin: 0 0 0 64px;
   padding: 0;
   font-size: 102px;
@@ -44,7 +44,7 @@
 
 .header__subtitle {
   position: absolute;
-  width: 388px;
+  max-width: 388px;
   left: 64px;
   bottom: 30px;
   line-height: 25px;
@@ -67,6 +67,7 @@
   height: 608px;
   right: 0;
   align-self: flex-end;
+  object-fit: cover;
 }
 
 .header__square-pic {
@@ -156,11 +157,14 @@
   justify-content: space-between;
   width: 1100px;
   flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
 }
 
 .table__cell {
   width: 250px;
   margin-top: 60px;
+  list-style: none;
 }
 
 .table__heading {
@@ -177,7 +181,7 @@
   margin: 0;
 }
 
-.table__text_bank {
+.table__text:nth-of-type(2) {
   margin-top: 20px;
 }
 
@@ -192,7 +196,8 @@
   background-position: left bottom;
   background-size: 867px 637px;
   background-repeat: no-repeat;
-  height: 890px;
+  min-height: 890px;
+  box-sizing: border-box;
 }
 
 .feynman__title {
@@ -230,7 +235,7 @@
   align-items: center;
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color:  #000000;
+  background-color: #1f1f1f;
 }
 
 .section-title_theme_dark {
@@ -263,13 +268,14 @@
 }
 
 .footer {
-  background-color:  #000000;
+  background-color:  #1f1f1f;
   min-height: 350px;
   display: flex;
   justify-content: center;
   align-items: stretch;
   padding-top: 60px;
   padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -282,26 +288,18 @@
 .footer__column {
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .footer__column_content_copyright {
   flex-basis: 711px;
-}
-
-.logo-place-footer {
-  top: 0;
-  left: 0;
+  justify-content: space-between;
 }
 
 .footer__author {
-  position: absolute;
-  left: 0;
-  bottom: 18px;
   font-size: 18px;
   font-weight: normal;
   line-height: 25px;
-  margin: 18px 0 0 0;
+  margin: 18px 0 18px 0;
 }
 
 .footer__column-heading {
